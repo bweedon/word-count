@@ -1,7 +1,6 @@
 package com.untangle.wordcount.service;
 
 import com.untangle.wordcount.model.Tracker;
-import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -98,9 +97,7 @@ public class WordCountService {
             if(dataSoFar.containsKey(word)) {
                 tracker = dataSoFar.get(word);
                 tracker.setCount(tracker.getCount() + 1);
-                if(!tracker.getSentenceIndex().contains(sentenceIndex)) {
-                    tracker.getSentenceIndex().add(sentenceIndex);
-                }
+                tracker.getSentenceIndex().add(sentenceIndex);
             } else {
                 ArrayList<Integer> sentenceIndexes = new ArrayList<>();
                 sentenceIndexes.add(sentenceIndex);

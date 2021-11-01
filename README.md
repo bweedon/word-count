@@ -46,3 +46,14 @@ The text above would output the following
 | word | {3:1,1,2} | 
 | write | {1:1} | 
 | written | {1:1} |
+
+## Running
+
+To run this, as long as maven and Java 11 are installed, you should just be able to run the below command after cloning the repo.
+```sh
+mvn spring-boot:run
+```
+
+You should also just be able to pull it into Intellij or Eclipse using the pom.xml file and everything should just work there as well assuming you have the spring-boot plugins.
+
+If you want to test a different set of text, just save it to a `.txt` file and save that file in `src/main/resources`, then when prompted for the file name, enter that one instead of `example1.txt`.
